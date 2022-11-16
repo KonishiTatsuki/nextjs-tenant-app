@@ -1,0 +1,64 @@
+// 商品詳細へのパスを生成する
+export async function getStaticPaths() {
+  const paths = getAllPostIds();
+  return {
+    paths,
+    fallback: false,
+  };
+}
+
+// idのリストを作成する
+export function getAllPostIds() {
+  const jsonFile = fetch('/api/items')
+    .then((response) => {
+      return response.json();
+    })
+    .catch((error) => {
+      console.log('失敗しました');
+    });
+
+  return jsonFile.map(({ fileName }) => {
+    return {
+      params: {
+        id: fileName.id,
+      },
+    };
+  });
+}
+
+
+//id,name,descriptionを取得(商品詳細情報を取得)
+export function getPostData(id: any) {
+  const jsonFile = fetch('/api/items')
+    .then((response) => {
+      return response.json();
+    });
+
+  // id とデータをあわせる
+  return {
+    id,
+    name,
+    description
+  };
+}
+
+export async function getStaticProps({ params }) {
+  const postData = await getPostData(params.id);
+  return {
+    postData,
+  };
+}
+
+
+
+
+// export function getAllPostIds() {    //IDを生成
+// const fileNames = fs.readdirSync(postsDirectory)  //pre-rendering.md、ssg-ssr.mdを取得
+// return fileNames.map(fileName => {
+//   return {
+//     params: {
+//       id: fileName.replace(/\.md$/, '')
+//     }
+//   }
+// })
+// }

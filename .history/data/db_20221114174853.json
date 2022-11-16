@@ -1,0 +1,11 @@
+{
+  "items": [
+    {
+      "name": "商品1",
+      "id": 1,
+      "description":"商品説明",
+      "price":"価格",
+      "imageUrl":"画像",
+    }
+  ]
+}
