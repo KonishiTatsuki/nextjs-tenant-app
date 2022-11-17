@@ -37,7 +37,8 @@ export default function Post({ postData }: any){
     <>
       {postData.id},
       {postData.name},
-      {postData.description},
+      <button type="submit">{postData.description}</button>
+      
     </>
   );
 }
@@ -91,3 +92,5 @@ export default function Post({ postData }: any){
   };
 };
 //---------------------------------------------------------------------------------
+
+//削除ボタン-------------------------------------------------------------------------

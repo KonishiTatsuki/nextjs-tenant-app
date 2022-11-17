@@ -11,6 +11,9 @@ export default function Home() {
         <title>商品一覧</title>
       </Head>
       <h1>商品一覧</h1>
+      {/* <Link href="/items/create">
+      <a>新規登録</a>
+      </Link> */}
       <ItemList />
       <form action="http://localhost:3000/items/register">
         <button>登録</button>

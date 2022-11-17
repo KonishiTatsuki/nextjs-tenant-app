@@ -31,7 +31,6 @@ type Item = {
   options: Option[];
 };
 
-//詳細画面--------------------------------------------------------------------------
 export default function Post({ postData }: any){
   return (
     <>
@@ -90,4 +89,3 @@ export default function Post({ postData }: any){
     },
   };
 };
-//---------------------------------------------------------------------------------

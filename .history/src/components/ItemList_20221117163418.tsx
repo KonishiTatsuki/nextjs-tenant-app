@@ -19,15 +19,15 @@ function ItemList() {
   // 取得したdataは Item[] なので、一行に一件ずつ表示
 
   //削除ボタン-------------------------------------------------------------------------
-  const submitDelete = async (e: any, id: any) => { //EventとIDを取得
+  const submitDelete = async (e: any, id: any) => {
+    //登録された情報を更新した状態でページを移動
     e.preventDefault(); //既定の動作を止める
-
     const response = await fetch(
-      `http://localhost:8000/items/${id}`, //Jsonファイルの一つを指定
+      `http://localhost:8000/items/${id}`,
       {
         //Jsonファイルに送る
-        method: 'PATCH',                    //変更
-        body: JSON.stringify({ deleted: true }), 
+        method: 'PATCH',
+        body: JSON.stringify({ deleted: true }),
         headers: {
           'Content-type': 'application/json', //Jsonファイルということを知らせるために行う
         },

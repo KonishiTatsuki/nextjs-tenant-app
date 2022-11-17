@@ -36,8 +36,8 @@ export default function Post({ postData }: any){
   return (
     <>
       {postData.id},
-      {postData.name},
-      {postData.description},
+      {/* {postData.name},
+      {postData.description}, */}
     </>
   );
 }
@@ -91,3 +91,5 @@ export default function Post({ postData }: any){
   };
 };
 //---------------------------------------------------------------------------------
+
+//削除ボタン-------------------------------------------------------------------------

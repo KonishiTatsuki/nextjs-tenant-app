@@ -6,15 +6,14 @@
       "description": "商品説明",
       "price": "価格",
       "imageUrl": "画像",
-      "deleted": false
+      "deleted": true
     },
     {
       "name": "商品2",
       "id": 2,
       "description": "商品説明",
       "price": "価格",
-      "imageUrl": "画像",
-      "deleted": false
+      "imageUrl": "画像"
     }
   ]
 }
