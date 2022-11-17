@@ -69,7 +69,7 @@ export default function Post({ postData }: any){
   
   //id,name,descriptionを取得(商品詳細情報を取得)
   export async function getPostData(id:string) {
-    console.log('id',id);
+    // console.log('id',id);
     const response = await fetch(`http://localhost:8000/items/${id}`, {
       method: 'GET',
     });
